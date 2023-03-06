@@ -1,0 +1,473 @@
+/*  
+    Yasir Khairul Malik
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #EFEFEF;
+    color: #112B3C;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+article h1 {
+    font-family: "Lora", serif;
+    font-size: 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position:sticky;
+    background-color: #EFEFEFD0;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding-bottom: 0.5em;
+    z-index: 10;
+
+    font-family: 'Lora', serif;
+}
+
+.header__heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header__nav {
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 0 2em;
+}
+
+.header__nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 0;
+}
+
+.header__nav > ul > li {
+    /* flex-grow: 1; */
+    /* width: 160px; */
+    box-sizing: border-box;
+    height: 2em;
+    flex-basis: 5rem;
+}
+
+.header__nav > ul > li > a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #1A4059;
+    /* text-align: center; */
+    padding: 1em;
+    margin: 0;
+    color: #EFEFEF;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    border-radius: 5%;
+
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+.header__nav > ul > li > a:hover {
+    color: #F66B0E;
+
+}
+
+.header__nav > ul > li > a:active {
+    color: #F66B0E;
+    border: 2px groove #EFEFEF;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    /* height: 60vh; */
+    gap: 2rem;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 4rem;
+    padding-bottom: 10rem;
+
+}
+
+@media (min-width: 1200px){
+    .profile {
+        flex-direction: row;
+    }
+}
+
+.profile__image {
+    box-sizing: border-box;
+    /* flex-basis: 30%; */
+    /* flex-basis: 600px; */
+    width: 600px;
+    /* flex-grow: 1; */
+    /* flex-basis: 5px; */
+    /* width: 10%; */
+    object-fit: contain;
+    justify-self: center;
+    border-radius: 5%;
+    box-shadow: 3px 3px 4px 1px gray;
+    /* position: absolute; */
+    /* bottom: 1vw; */
+    /* left: 0; */
+    /* width: 130vw; */
+    /* z-index: -2; */
+}
+
+@media (min-width: 1200px) {
+    .profile__image{
+        order: 2;
+    }
+}
+
+.profile__desc {
+    box-sizing: border-box;
+    /* padding-top: 7rem; */
+    flex-basis: 200px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* z-index: -1; */
+
+    font-family: "Lora", serif;
+}
+
+.profile__desc h1 {
+    font-size: 2rem;
+}
+
+.profile__desc__summary {
+    font-size : 1.5rem;
+}
+
+.name--bold {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.profile__desc__details {
+    font-family: "Roboto", sans-serif;
+}
+
+@media (min-width: 1200px) {
+    .profile__desc {
+        padding-top: 7rem;
+        /* padding-left: 4rem; */
+        /* flex-basis: 300; */
+        max-width: 700px;
+        flex-grow: 1;
+        /* z-index: -1; */
+    }
+}
+
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    background-color: #F66B0ED0;
+    width: fit-content;
+    /* height: max-content; */
+    max-width: 360px;
+    position: fixed;
+    right: 0;
+    top: 25%;
+}
+
+.contact--open {
+    right: 0;
+}
+
+.contacts__toggle {
+    display: inline-block;
+    box-sizing: border-box;
+    align-self: center;
+    /* justify-self: center; */
+    /* width: 2rem; */
+    /* height: 300px; */
+    /* min-height: 130px; */
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: bold;
+    line-height: 130px;
+}
+
+.contacts__toggle:hover {
+    background-color: #112B3C;
+    color: #EFEFEF;
+}
+
+.contacts__toggle:active {
+    background-color: #112B3C;
+    color: #F66B0E;
+}
+
+.contact {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    color: #EFEFEF
+}
+
+.contact li img {
+    box-sizing: border-box;
+    width: 3rem;
+    background-color: #1A4059;
+    border-radius: 100%;
+}
+
+.contact li img:hover {
+    background-color: #112B3C;
+}
+
+
+.contact--open {
+    display: flex;
+}
+
+.contact__email, .contact__phone {
+    flex-basis: 100%;
+}
+
+
+
+.educations {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #112B3C;
+    color: #EFEFEF;
+    padding: 2rem;
+}
+
+.educations ol {
+    list-style: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 600px;
+    z-index: 0;
+}
+
+.education__place {
+    font-size: 1.25rem;
+    font-family: "Lora", serif;
+}
+
+.educations__major {
+    font-size: 1rem
+}
+
+.education__place::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 100%;
+    background-color: #EFEFEF;
+
+}
+
+.education__place::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0.35em;
+    height: 4.5em;
+    border-left: 1px dashed #EFEFEF;
+}
+
+li:last-child .education__place::after {
+    display: none;
+}
+
+.educations li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 8em;
+}
+
+.educations h1 {
+    color: #F66B0E;
+    align-self: flex-start;
+}
+
+.education__major {
+    padding-left: 3em;
+}
+
+.education__period {
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: 1rem
+}
+
+.education__period__estimated {
+    font-style: oblique;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    background-color: #1A4059;
+    padding: 2rem;
+    color: #EFEFEF; 
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.skills h1 {
+    color: #F66B0E;
+}
+
+.skills__list h2 {
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+}
+
+.skills__list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    justify-content: start;
+
+    list-style: none;
+}
+
+.skills__list li {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 15em;
+    flex-grow: 1;
+    max-width: 340px;
+}
+
+.skills img {
+    width: 5rem;
+}
+
+details li {
+    font-size: 1rem;
+}
+
+
+.projects {
+    background-color: #215376;
+    color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 2rem 0 0;
+    font-size: 1.25rem;
+}
+
+.projects h1 {
+    color: #F66B0E;
+    padding-left: 2rem;
+}
+
+.projects section {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    padding: 2rem 2rem 4rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.projects section:nth-child(odd) {
+    background-color: #EFEFEF;
+    color: #112B3C;
+    
+}
+
+.project__image {
+    width: 450px;
+    object-fit: contain;
+    border-radius: 5%;
+    box-shadow: 2px 2px 4px 1px gray;
+}
+
+.project__title {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    flex-basis: 100%;
+}
+
+.project__description {
+    flex-basis: 100%;
+}
+
+@media (min-width:1200px) {
+    .projects section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .projects section:nth-child(odd) a{
+        order: 2;
+    }
+    .project__description {
+        flex-basis: 50%
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F66B0E;
+    color: #EFEFEF;
+    font-family: 'Lora', serif;
+}
