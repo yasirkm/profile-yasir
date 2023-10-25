@@ -453,7 +453,7 @@ li:last-child .education__place::after {
     align-items: flex-start;
     justify-content: space-between;
 
-    padding: 2rem 0 0;
+    padding: 2rem 0;
     font-size: 1.25rem;
 }
 
