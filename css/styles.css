@@ -436,10 +436,14 @@ li:last-child .education__place::after {
     width: 5rem;
 }
 
-details li {
+.skills__list details li {
     font-size: 1rem;
 }
 
+.skills__list details a {
+    font-size: 1rem;
+    color: #F66B0E;
+}
 
 .projects {
     background-color: #215376;
