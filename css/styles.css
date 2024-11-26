@@ -290,7 +290,7 @@ details ul {
 
 
 
-.educations {
+.timeline {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -301,7 +301,7 @@ details ul {
     padding: 2rem;
 }
 
-.educations ol {
+.timeline ol {
     list-style: none;
     box-sizing: border-box;
     width: 100%;
@@ -310,16 +310,16 @@ details ul {
     z-index: 0;
 }
 
-.education__place {
+.timeline__place {
     font-size: 1.25rem;
     font-family: "Lora", serif;
 }
 
-.educations__major {
+.timeline__desc {
     font-size: 1rem
 }
 
-.education__place::before {
+.timeline__place::before {
     content: '';
     display: inline-block;
     vertical-align: middle;
@@ -331,7 +331,7 @@ details ul {
 
 }
 
-.education__place::after {
+.timeline__place::after {
     content: '';
     display: block;
     position: absolute;
@@ -340,11 +340,11 @@ details ul {
     border-left: 1px dashed #EFEFEF;
 }
 
-li:last-child .education__place::after {
+li:last-child .timeline__place::after {
     display: none;
 }
 
-.educations li {
+.timeline li {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -354,33 +354,33 @@ li:last-child .education__place::after {
 }
 
 @media (min-width:600px) {
-    .educations li{
+    .timeline li{
         height: 8em;
     }
-    .education__period{
+    .timeline__period{
         align-self: flex-end;
     }
-    .education__place::after{
+    .timeline__place::after{
         height: 6em;
     }
 }
 
-.educations h1 {
+.timeline h1 {
     color: #F66B0E;
     align-self: flex-start;
 }
 
-.education__major {
+.timeline__desc {
     padding-left: 3em;
 }
 
-.education__period {
+.timeline__period {
     padding-left: 3em;
     font-weight: bold;
     font-size: 1rem
 }
 
-.education__period__estimated {
+.timeline__period__estimated {
     font-style: oblique;
 }
 
